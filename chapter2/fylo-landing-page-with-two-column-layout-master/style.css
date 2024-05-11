@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  height: 70px;
+  justify-content: space-between;
+}
+
+nav img {
+  height: 50%;
+}
+
+nav .links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav .links a {
+  text-decoration: none;
+  color: #000;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+  height: 100%;
+  padding: 0 80px;
+}
+
+.content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.content h1 {
+  font-size: 35px;
+  width: 93%;
+}
+
+.content p {
+  line-height: 25px;
+  width: 80%;
+}
+
+.banner img {
+  width: 50%;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  gap: 10px;
+}
+
+.inputs input {
+  flex: 2;
+  padding: 10px 15px;
+  border: 1px solid #d1d1d1;
+  outline: none;
+}
+
+.inputs button {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  background-color: hsl(224, 93%, 58%);
+  color: #fff;
+}
+
+.productive {
+  position: relative;
+  height: 100%;
+  background-color: #f8f8fe;
+  background-size: 100%;
+  width: 100%;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px;
+}
+
+.p-bg {
+  position: absolute;
+  top: -70px;
+  height: auto;
+  left: 0;
+  width: 100% !important;
+  object-fit: cover;
+}
+.p-content a img {
+  width: 15px;
+  height: 15px;
+}
+
+.productive img {
+  width: 40%;
+}
+
+.p-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+
+.p-content h1 {
+  font-size: 35px;
+}
+
+.p-content p {
+  margin: 10px 0;
+}
+
+.p-content a {
+  color: hsl(170, 45%, 43%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card {
+  margin-top: 15px;
+  width: 48%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.avatar img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+
+.avatar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.avatar-content span {
+  font-size: 12px;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  height: 35vh;
+  background-color: hsl(238, 22%, 44%);
+  color: #fff;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 2;
+}
+
+.left h1 {
+  font-size: 40px;
+}
+
+.left p {
+  width: 70%;
+  line-height: 20px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.right input {
+  width: 80%;
+  padding: 10px 15px;
+  outline: none;
+}
+
+.right button {
+  width: 40%;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #3065f8;
+  border: none;
+  color: #fff;
+}
+
+footer {
+  height: 40vh;
+  background-color: hsl(243, 87%, 12%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  color: #fff;
+}
+
+.f-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  height: 50%;
+}
+
+.f-left img {
+  width: 60%;
+}
+
+.icons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.icons img {
+  width: 15px;
+}
+
+.f-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.f-center {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+
+  height: 50%;
+}
+.f-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.f-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  align-items: start;
+}
+
+.f-right img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}

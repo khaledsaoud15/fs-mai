@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Static => default*/
+/* Relative => default = body */
+/* Absolute => child of relative */
+/* sticky */
+/* Fixed=> fixed to the body */
+
+.masterContainer {
+  width: 80%;
+  height: 80vh;
+  background-color: #cceafce6;
+  position: relative;
+}
+
+.container {
+  width: 50%;
+  height: 50vh;
+  background-color: #e3c19d;
+  padding: 10px;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  translate: 50% -50%;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #000;
+  top: 15%;
+  left: 15%;
+  border-radius: 50%;
+}
+.overlay2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #000;
+  top: 15%;
+  right: 15%;
+  border-radius: 50%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 60px;
+  background-color: #da7d80;
+  position: sticky;
+  top: 0;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 40px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+/* BOX MODEL */
+/* Margin/Padding/border/width+hight */
