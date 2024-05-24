@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  height: 80%;
+  background-color: #000;
+}
+
+@media (min-width: 600px) {
+  .container {
+    width: 300px;
+    height: 300px;
+    background-color: #e62dc1;
+  }
+}
+
+@media (min-width: 870px) {
+  .container {
+    width: 500px;
+    height: 500px;
+    background-color: #feacee;
+  }
+}

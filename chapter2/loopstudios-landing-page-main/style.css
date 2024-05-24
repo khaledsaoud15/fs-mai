@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: sans-serif; */
+  font-family: "Alata", sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8rem;
+  height: 80px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999999999999;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 8rem;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+
+header h1 {
+  width: 40%;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 4rem;
+  color: #fff;
+  padding: 35px;
+  border: 2px solid #fff;
+}
+
+.vr {
+  width: 100%;
+  padding: 8rem;
+  height: 100%;
+  position: relative;
+}
+
+.vr img {
+  position: absolute;
+  width: 40%;
+  height: 60vh;
+}
+
+.content {
+  position: absolute;
+  z-index: 2;
+  width: 40%;
+  text-align: center;
+  padding: 4rem;
+  background-color: #fff;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  right: 18%;
+  top: 90%;
+}
+
+.content h1 {
+  font-size: 1.8rem;
+}
+
+.content p {
+  line-height: 2rem;
+}
+
+.second-section {
+  margin: 300px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 8rem;
+  gap: 40px;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.tableau {
+  position: relative;
+}
+
+.tableau h1 {
+  position: absolute;
+  bottom: 10%;
+  color: #c9c6c6;
+
+  padding-left: 60px;
+}
+
+.tableau img {
+  width: 100%;
+  height: 100%;
+}
+.section-title button {
+  background-color: #f3eeee;
+  padding: 10px 24px;
+}
+footer {
+  background-color: black;
+  height: 30vh;
+  padding: 0 8rem;
+}

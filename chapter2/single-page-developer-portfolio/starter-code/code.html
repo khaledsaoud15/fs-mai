@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "SpaceGrotesk";
+        src: url("assets/fonts/SpaceGrotesk-VariableFont_wght.ttf");
+      }
+      * {
+        font-family: "SpaceGrotesk", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <nav
+      class="flex items-center justify-between px-20 h-20 w-full absolute top-0 left-0"
+    >
+      <img src="assets/images/logo.svg" alt="" />
+      <div class="flex items-center gap-8 mr-20">
+        <img src="assets/images/icon-github.svg" alt="" />
+        <img src="assets/images/icon-frontend-mentor.svg" alt="" />
+        <img src="assets/images/icon-linkedin.svg" alt="" />
+        <img src="assets/images/icon-twitter.svg" alt="" />
+      </div>
+    </nav>
+    <main class="px-20 h-full overflow-hidden">
+      <header class="flex items-center h-screen relative">
+        <img
+          src="assets/images/pattern-rings.svg"
+          alt=""
+          class="absolute top-20 -left-14 w-1/4 h-auto"
+        />
+        <img
+          src="assets/images/image-profile-desktop.webp"
+          alt=""
+          class="w-1/3 h-[97vh] object-cover absolute top-0 right-[5%] -z-10"
+        />
+        <div
+          class="w-28 h-28 bg-trasparent border border-white rounded-full absolute top-[70%] right-[33%]"
+        ></div>
+        <div class="flex flex-col gap-14 w-3/4 h-auto">
+          <h1 class="text-8xl text-white">
+            Nice to meet you! I’m
+            <span class="border-b border-green-500">Adam Keyes.</span>
+          </h1>
+          <p class="text-white text-xl w-2/4">
+            Based in the UK, I’m a front-end developer passionate about building
+            accessible web apps that users love.
+          </p>
+          <p
+            class="bg-transparent text-white relative after:content[''] after:absolute after:top-[110%] after:left-0 after:w-24 after:h-[1px] after:bg-green-500 cursor-pointer"
+          >
+            CONTACT ME
+          </p>
+        </div>
+      </header>
+
+      <section
+        class="relative grid grid-cols-3 grid-rows-2 gap-10 mt-8 h-[50vh] py-4 border-t w-full"
+      >
+        <img
+          src="assets/images/pattern-rings.svg"
+          alt=""
+          class="absolute top-[55%] -right-[30%] h-auto"
+        />
+        <div class="w-full h-full flex flex-col gap-3">
+          <h1 class="text-5xl text-white font-bold">HTML</h1>
+          <p class="text-base font-thin text-white">4 Years of experience</p>
+        </div>
+        <div class="w-full h-full flex flex-col gap-3">
+          <h1 class="text-5xl text-white font-bold">CSS</h1>
+          <p class="text-base font-thin text-white">4 Years of experience</p>
+        </div>
+        <div class="w-full h-full flex flex-col gap-3">
+          <h1 class="text-5xl text-white font-bold">Javascript</h1>
+          <p class="text-base font-thin text-white">4 Years of experience</p>
+        </div>
+        <div class="w-full h-full flex flex-col gap-3">
+          <h1 class="text-5xl text-white font-bold">accessiblity</h1>
+          <p class="text-base font-thin text-white">4 Years of experience</p>
+        </div>
+        <div class="w-full h-full flex flex-col gap-3">
+          <h1 class="text-5xl text-white font-bold">React</h1>
+          <p class="text-base font-thin text-white">3 Years of experience</p>
+        </div>
+        <div class="w-full h-full flex flex-col gap-3">
+          <h1 class="text-5xl text-white font-bold">Sass</h1>
+          <p class="text-base font-thin text-white">4 Years of experience</p>
+        </div>
+      </section>
+
+      <section class="flex flex-col w-full h-auto gap-20 mt-20">
+        <div class="flex items-center w-full justify-between">
+          <h1 class="text-8xl font-semibold text-white leading-[0px]">
+            Projects
+          </h1>
+          <p
+            class="text-white font-thin border-b border-green-500 cursor-pointer"
+          >
+            CONTACT ME
+          </p>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-3 gap-8 w-full h-auto">
+          <div class="flex flex-col gap-4">
+            <img
+              src="assets/images/thumbnail-project-1-large.webp"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+            <h1 class="text-3xl font-semibold text-white">Design Portfolio</h1>
+            <p class="text-white font-thin text-md">HTML CSS</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img
+              src="assets/images/thumbnail-project-2-large.webp"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+            <h1 class="text-3xl font-semibold text-white">
+              E-learning Landing Page
+            </h1>
+            <p class="text-white font-thin text-md">HTML CSS</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img
+              src="assets/images/thumbnail-project-3-large.webp"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+            <h1 class="text-3xl font-semibold text-white">Todo-App</h1>
+            <p class="text-white font-thin text-md">HTML CSS</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img
+              src="assets/images/thumbnail-project-4-large.webp"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+            <h1 class="text-3xl font-semibold text-white">
+              Entertainement web app
+            </h1>
+            <p class="text-white font-thin text-md">HTML CSS JAVASCRIPT</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img
+              src="assets/images/thumbnail-project-5-large.webp"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+            <h1 class="text-3xl font-semibold text-white">Memory Game</h1>
+            <p class="text-white font-thin text-md">HTML CSS JAVASCRIPT</p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <img
+              src="assets/images/thumbnail-project-6-large.webp"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+            <h1 class="text-3xl font-semibold text-white">Art Gallery Show</h1>
+            <p class="text-white font-thin text-md">HTML CSS JAVASCRIPT</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="flex flex-col w-full justify-between h-[90vh] bg-[#151515] px-20 items-center py-8 relative mt-14"
+    >
+      <img
+        src="assets/images/pattern-rings.svg"
+        alt=""
+        class="absolute top-[45%] -left-[15%]"
+      />
+      <div class="flex justify-between h-auto w-full">
+        <div class="flex flex-col gap-4">
+          <h1 class="text-8xl font-semibold text-white">Contact</h1>
+          <p class="w-2/4 text-white">
+            I would love to hear about your project and how I could help. Please
+            fill in the form, and I’ll get back to you as soon as possible.
+          </p>
+        </div>
+        <form class="w-2/4 h-auto flex flex-col gap-10">
+          <input
+            type="text"
+            placeholder="Name"
+            class="w-full py-2 px-4 border-b outline-none text-white placeholder:text-gray-400 border-gray-400 bg-transparent"
+          />
+          <input
+            type="text"
+            placeholder="Email"
+            class="w-full py-2 px-4 border-b outline-none text-white placeholder:text-gray-400 border-gray-400 bg-transparent"
+          />
+          <input
+            type="text"
+            placeholder="Message"
+            class="w-full py-2 px-4 border-b outline-none text-white placeholder:text-gray-400 border-gray-400 bg-transparent"
+          />
+          <button
+            class="py-2 ml-auto border-b border-b-green-500 text-white bg-transparent w-[35%]"
+          >
+            SEND MESSAGE
+          </button>
+        </form>
+      </div>
+      <div class="flex items-center w-full py-8 mt-8 border-t justify-between">
+        <img src="assets/images/logo.svg" alt="" />
+        <div class="flex items-center gap-8">
+          <img src="assets/images/icon-github.svg" alt="" />
+          <img src="assets/images/icon-frontend-mentor.svg" alt="" />
+          <img src="assets/images/icon-linkedin.svg" alt="" />
+          <img src="assets/images/icon-twitter.svg" alt="" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="tailwind.config.js"></script>
+  </body>
+</html>
