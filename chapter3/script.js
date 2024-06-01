@@ -284,4 +284,4 @@ function toHex(decimal) {
   return result;
 }
 
-console.log(toHex(236));
+console.log(toHex(550));
