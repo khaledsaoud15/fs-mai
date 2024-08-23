@@ -528,5 +528,65 @@ function reverseWord(word) {
   // return word.split(" ").reverse().join(" ")
 }
 
-console.log(reverseWord("Hello world"));
-console.log(reverseWord("Hi There."));
+// console.log(reverseWord("Hello world"));
+// console.log(reverseWord("Hi There."));
+
+function generateHashtag(str) {
+  if (str === "") {
+    return false;
+  }
+  if (str === "#") {
+    return false;
+  }
+  let hashWord = "";
+  str = str.trim();
+  str = str.split(" ");
+  for (let i = 0; i < str.length; i++) {
+    str[i] = str[i].slice(0, 1).toUpperCase() + str[i].slice(1);
+    hashWord += str[i];
+  }
+  if (hashWord.length >= 140) {
+    return false;
+  }
+  hashWord = "#" + hashWord;
+  if (hashWord === "#") {
+    return false;
+  }
+  return hashWord;
+}
+
+console.log(generateHashtag("hello   hh  world"));
+console.log(generateHashtag("a".repeat(139)));
+console.log(generateHashtag("#"));
+
+
+// OBJECTS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function alphabetPosition(text) {
+//   text = text.toLowerCase();
+//   text = text.split("");
+//   let arr = [];
+//   const alph = "abcdefghijklmnopqrstuvwxyz";
+//   text.filter((el) =>
+//     alph.includes(el) ? arr.push(alph.indexOf(el) + 1) : ""
+//   );
+//   return arr.join(" ");
+// }

@@ -1,0 +1,7 @@
+install react-router-dom
+initialize the browserRouter / routes / route
+create all the pages you need 
+add them to route + path => <Route path="/" element={<Home/>}/>
+add a link to the route in the Nav.jsx => <NavLink to="/"></NavLink>
+create a dynamic route (Query) => <Route path="/products/:id" element={<Products/>}/>
+get the data from the query using the useParams Hooks

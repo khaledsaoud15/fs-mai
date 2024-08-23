@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Armery</title>
+  </head>
+  <body class="h-full w-full">
+    <!-- Header -->
+    <header
+      class="w-full h-9 border-b flex items-center justify-between px-8 md:px-24"
+    >
+      <div class="flex items-center gap-2">
+        <h1 class="text-base font-thin">example@gmail.com</h1>
+        <p class="font-bold">USA</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <img
+          src="assets/icons/facebook-176-svgrepo-com.svg"
+          alt=""
+          class="w-4 h-4"
+        />
+        <img src="assets/icons/github-svgrepo-com.svg" alt="" class="w-4 h-4" />
+        <img
+          src="assets/icons/instagram-svgrepo-com.svg"
+          alt=""
+          class="w-4 h-4"
+        />
+      </div>
+    </header>
+    <!-- navbar -->
+    <nav
+      class="relative flex items-center justify-between w-full h-14 px-8 border-b md:px-24"
+    >
+      <h1 class="text-base font-bold md:text-2xl">
+        AR<span class="text-red-500">M</span>ERY
+      </h1>
+      <div class="hamburger flex flex-col gap-1 w-8 md:hidden">
+        <span class="span top-span bg-black w-full h-1 rounded-md"></span>
+        <span class="span middle-span bg-black w-full h-1 rounded-md"></span>
+        <span class="span bottom-span bg-black w-full h-1 rounded-md"></span>
+      </div>
+      <!-- Mobile version -->
+      <div
+        class="slide z-20 absolute top-full py-3 left-0 w-full flex flex-col gap-3 md:flex-row md:static md:w-auto overflow-hidden"
+      >
+        <a
+          href=""
+          class="link text-base font-semibold -translate-x-[45rem] pb-2 pl-8 md:pl-0 md:border-none md:opacity-100 md:-translate-x-0"
+          >Home</a
+        >
+        <a
+          href=""
+          class="link text-base font-semibold pb-2 -translate-x-[45rem] pl-8 md:pl-0 md:border-none md:opacity-100 md:-translate-x-0"
+          >About</a
+        >
+        <a
+          href=""
+          class="link text-base font-semibold pb-2 -translate-x-[45rem] pl-8 md:pl-0 md:border-none md:opacity-100 md:-translate-x-0"
+          >Contact</a
+        >
+        <a
+          href=""
+          class="link text-base font-semibold pb-2 -translate-x-[45rem] pl-8 md:pl-0 md:border-none md:opacity-100 md:-translate-x-0"
+          >Blog</a
+        >
+      </div>
+    </nav>
+    <!-- MAIN -->
+    <main class="h-full w-full">
+      <section
+        class="w-full h-full bg-black px-8 md:px-24 flex items-center flex-col gap-4 lg:flex-row md:h-[80vh]"
+      >
+        <div class="w-full px-4 py-8 text-white gap-4 flex flex-col lg:w-2/4">
+          <h1 class="title text-3xl font-bold -translate-x-10 opacity-0">
+            AK-46
+          </h1>
+          <p class="desc text-base font-thin translate-y-10 opacity-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+            laborum? Alias beatae porro officia ut provident, quia error dolore
+            ex, nobis excepturi perspiciatis accusamus ratione quisquam fugiat
+            ipsam eos debitis!
+          </p>
+          <button
+            class="cta -translate-x-10 opacity-0 rounded-md w-1/3 py-2 bg-transparent color-white border border-white hover:bg-white hover:text-black active:bg-transparent active:text-white"
+          >
+            Check Item
+          </button>
+        </div>
+        <img
+          src="assets/images/ak-46.png"
+          alt=""
+          class="ak opacity-0 w-full h-auto object-cover drop-shadow-2xl lg:w-2/4"
+        />
+      </section>
+      <section class="flex flex-col gap-2 w-full h-auto px-24 py-14">
+        <div class="flex justify-between items-center w-full">
+          <h1 class="font-bold text-2xl">KNIVES</h1>
+          <button class="px-4 py-2 bg-black rounded-md text-white">
+            Check more
+          </button>
+        </div>
+        <div class="swiper w-full h-auto">
+          <div class="swiper-wrapper w-full h-full"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="fixed bottom-4 right-4 z-10 w-6 h-6 bg-black rounded-full p-4 flex items-center justify-center cursor-pointer"
+    >
+      <p class="text-white text-xs">cart</p>
+    </div>
+
+    <div
+      class="p-8 flex flex-col gap-4 fixed top-2/4 left-2/4 h-3/4 w-3/4 -translate-x-2/4 -translate-y-2/4 shadow-2xl rounded-md bg-white z-30"
+    >
+      <div class="flex items-center justify-between w-1/4">
+        <h1 class="font-bold text-3xl">In Cart</h1>
+        <p class="text-base font-thin">
+          Total
+          <span class="font-bold">$5000</span>
+        </p>
+      </div>
+      <div
+        class="cart flex flex-col gap-3 w-full h-[50vh] min-h-[30vh] overflow-y-scroll pr-3"
+      ></div>
+    </div>
+    <script src="animation.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

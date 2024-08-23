@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .slash {
+    @apply after:content-[''] after:w-[900px] after:h-14 after:-rotate-45 after:bg-slate-100/50 after:absolute after:-top-10 after:-left-[150%] hover:after:top-[120%] hover:after:left-[90%] hover:after:transition-all hover:after:duration-1000;
+  }
+}

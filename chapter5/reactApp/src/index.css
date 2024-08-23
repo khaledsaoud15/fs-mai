@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .flexbox {
+    @apply flex items-center;
+  }
+}
+
+.swiper-button-next {
+  background-color: #7b7a7a80 !important;
+  right: 80%;
+  top: 80%;
+  padding: 30px;
+  border-radius: 50%;
+  color: #000 !important;
+  fill: black !important;
+  stroke: black !important;
+}
+.swiper-button-prev {
+  background-color: #7b7a7a80 !important;
+  left: 10%;
+  top: 80%;
+  padding: 30px;
+  border-radius: 50%;
+  color: #000 !important;
+  fill: black !important;
+  stroke: black !important;
+}
