@@ -31,4 +31,26 @@ const getAllWeapons = async (req, res) => {
   }
 };
 
-module.exports = { addWeapon, getAllWeapons };
+const deletWeapon = async (req, res) => {
+  const id = req.params.id;
+  try {
+    await Weapon.findByIdAndDelete(id);
+    responseHandler(res, 200, "weapon deleted", id);
+  } catch (err) {
+    responseHandler(res, 500, "server err", err);
+  }
+};
+
+const updateWeapon = async (req, res) => {
+  const id = req.params.id;
+  try {
+    const updatedWeapon = await Weapon.findByIdAndUpdate(id, {
+      $set: req.body,
+    });
+    responseHandler(res, 200, "updated", updatedWeapon);
+  } catch (err) {
+    responseHandler(res, 500, "cant update", err);
+  }
+};
+
+module.exports = { addWeapon, getAllWeapons, deletWeapon, updateWeapon };
