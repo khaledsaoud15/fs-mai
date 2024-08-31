@@ -1,14 +1,18 @@
 const User = require("../models/user.model");
 const { responseHandler } = require("../utils/responsHandler");
 const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 
 const register = async (req, res) => {
   const { name, email, password } = req.body;
+
+  const salt = await bcrypt.genSalt(10);
   try {
     const existingUser = await User.findOne({ email });
     existingUser && responseHandler(res, 400, "Email already exists");
 
-    const user = new User({ name, email, password });
+    const hashedPassword = await bcrypt.hash(password, salt);
+    const user = new User({ name, email, password: hashedPassword });
     await user.save();
     responseHandler(res, 201, user);
   } catch (err) {
@@ -17,10 +21,13 @@ const register = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  const { email } = req.body;
+  const { email, password } = req.body;
   try {
     const user = await User.findOne({ email });
     !user && responseHandler(res, 400, "Please register");
+
+    const decryptedPassword = await bcrypt.compare(password, user.password);
+    !decryptedPassword && responseHandler(res, 400, "Invalid password");
 
     const payload = {
       id: user.id,
