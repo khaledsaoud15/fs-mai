@@ -1,3 +1,3 @@
-exports.responseHandler = (res, statusCode, message, data = {}) => {
-  return res.status(statusCode).json({ message, data });
+exports.responseHandler = (res, statusCode, data = {}) => {
+  return res.status(statusCode).json(data);
 };
