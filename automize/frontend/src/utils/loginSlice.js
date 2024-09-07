@@ -9,9 +9,7 @@ export const loginuser = createAsyncThunk(
         email,
         password,
       });
-      const token = response.headers["x-auth-token"];
-      localStorage.setItem("x-auth-token", token);
-      return { token, user: response.data };
+      return response.data;
     } catch (err) {
       return rejectWithValue(err.response.data);
     }
@@ -21,7 +19,6 @@ export const loginuser = createAsyncThunk(
 const authSlice = createSlice({
   name: "auth",
   initialState: {
-    token: localStorage.getItem("x-auth-token"),
     user: null,
     isLoading: null,
     isError: null,
@@ -29,7 +26,6 @@ const authSlice = createSlice({
   },
   reducers: {
     logout: (state) => {
-      localStorage.removeItem("x-auth-token");
       state.user = null;
       state.token = null;
     },
@@ -42,8 +38,7 @@ const authSlice = createSlice({
       })
       .addCase(loginuser.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.token = action.payload.token;
-        state.user = action.payload.user;
+        state.user = action.payload;
       })
       .addCase(loginuser.rejected, (state, action) => {
         state.isLoading = false;

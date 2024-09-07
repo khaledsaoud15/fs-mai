@@ -7,7 +7,7 @@ const getUsers = async (req, res) => {
   let users;
   try {
     if (isNew) {
-      users = await User.find({}).sort({ createdAt: -1 }).limit(1);
+      users = await User.find({}).sort({ createdAt: -1 }).limit(3);
     } else {
       users = await User.find({});
     }

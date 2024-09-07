@@ -42,11 +42,15 @@ const login = async (req, res) => {
       role: user.role,
     };
 
-    jwt.sign(payload, process.env.SECRET_KEY, (err, token) => {
-      if (err) responseHandler(res, 500, err.message);
+    const token = jwt.sign(payload, process.env.SECRET_KEY);
 
-      responseHandler(res, 200, { ...user._doc, token });
+    res.cookie("x-auth-token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "Strict",
     });
+
+    responseHandler(res, 200, { ...user._doc, token });
   } catch (err) {
     responseHandler(res, 500, err.message);
   }
