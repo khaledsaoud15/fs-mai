@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Ecobazar</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="flex flex-col h-fit">
+      <div class="flex items-center w-full justify-between h-10 border-b px-16">
+        <div class="flex items-center gap-1">
+          <img src="assets/icons/MapPin.svg" alt="map pin" class="h-4" />
+          <span class="text-xs text-gray-700"
+            >Store Location: Lincoln- 344, Illinois, Chicago, USA</span
+          >
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-gray-700">USD</span>
+            <span class="text-xs text-gray-700">Eng</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-gray-700">Login</span>
+            <span class="text-xs text-gray-700">Sign Up</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="sticky top-0 z-10 flex flex-col bg-white">
+      <div class="flex items-center justify-between h-16 px-16">
+        <div class="flex items-center gap-2">
+          <img src="assets/icons/logo.svg" alt="" class="h-8" />
+          <h1 class="text-3xl font-bold">Ecobazar</h1>
+        </div>
+        <div
+          class="w-1/3 h-10 flex items-center border pl-2 rounded-md overflow-hidden"
+        >
+          <img src="assets/icons/Search.svg" alt="" class="h-4" />
+          <input
+            type="text"
+            class="w-3/4 h-full px-3 outline-none border-none"
+          />
+          <button
+            class="px-3 h-full bg-[#00B307] hover:bg-green-600 w-1/5 ml-auto text-white"
+          >
+            Search
+          </button>
+        </div>
+        <div class="flex items-center gap-4">
+          <img src="assets/icons/Heart.svg" alt="" class="h-6" />
+          <div class="flex items-center gap-3">
+            <img src="assets/icons/Bag.svg" alt="" class="h-6" id="shop" />
+            <div class="flex flex-col gap-1">
+              <span class="font-thin text-xs">Shopping cart</span>
+              <span class="font-bold text-xs" id="totalCart">$75.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-between h-10 bg-gray-900 px-16">
+        <div class="flex items-center gap-4">
+          <span
+            class="font-semibold text-gray-500 hover:text-white cursor-pointer text-xs flex items-center gap-1"
+            >Home <img src="assets/icons/ChevronDown.svg" alt="" class="h-3"
+          /></span>
+          <span
+            class="font-semibold text-gray-500 hover:text-white cursor-pointer text-xs flex items-center gap-1"
+            >Shop <img src="assets/icons/ChevronDown.svg" alt="" class="h-3"
+          /></span>
+          <span
+            class="font-semibold text-gray-500 hover:text-white cursor-pointer text-xs flex items-center gap-1"
+            >Pages <img src="assets/icons/ChevronDown.svg" alt="" class="h-3"
+          /></span>
+          <span
+            class="font-semibold text-gray-500 hover:text-white cursor-pointer text-xs flex items-center gap-1"
+            >Blog <img src="assets/icons/ChevronDown.svg" alt="" class="h-3"
+          /></span>
+          <span
+            class="font-semibold text-gray-500 hover:text-white cursor-pointer text-xs flex items-center"
+            >About us
+          </span>
+
+          <span
+            class="font-semibold text-gray-500 hover:text-white cursor-pointer text-xs flex items-center gap-1"
+            >Contact
+          </span>
+        </div>
+        <div class="flex items-center gap-1">
+          <img src="assets/icons/PhoneCall.svg" alt="" class="h-4" />
+          <span class="text-xs font-thin text-white">(219)555-014</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CART -->
+    <div
+      class="w-1/4 h-screen p-4 fixed top-0 -right-3/4 bg-white z-20 flex flex-col gap-4"
+      id="mainCart"
+    >
+      <div class="flex items-center justify-between">
+        <h1 class="font-medium text-base" id="top-count">Shopping Card (2)</h1>
+        <p class="font-medium text-base cursor-pointer" id="del">X</p>
+      </div>
+      <div
+        class="flex flex-col gap-3 w-full h-full overflow-y-auto"
+        id="shopCart"
+      ></div>
+      <div class="flex flex-col gap-2 mt-auto">
+        <div class="flex items-center justify-between">
+          <p class="text-gray-600" id="count">2 Products</p>
+          <span class="font-medium" id="total">$26.55</span>
+        </div>
+        <button class="w-full rounded-full bg-green-500 py-2 text-white">
+          Checkout
+        </button>
+      </div>
+    </div>
+
+    <main class="p-16">
+      <section
+        class="flex items-center justify-between w-full h-screen bg-[#edf2ee] rounded-lg px-20"
+      >
+        <div class="flex flex-col gap-2 w-2/4">
+          <span class="text-green-500 text-sm">WELCOME TO SHOPERY</span>
+          <h2 class="font-bold text-5xl">Fresh & Healthy organic food</h2>
+          <p class="font-semibold text-xl">
+            Sale up to <span class="text-orange-500">30% OFF</span>
+          </p>
+          <span class="font-thin text-xs"
+            >Free shipping on all order we deliver you enjoy</span
+          >
+          <button class="w-fit px-8 py-2 text-white rounded-full bg-green-500">
+            shop now
+          </button>
+        </div>
+        <img src="assets/images/header.png" alt="" class="w-3/5 object-cover" />
+      </section>
+      <section class="flex flex-col gap-8 w-full h-fit">
+        <h2 class="font-bold text-3xl text-center mt-8">Featured Products</h2>
+        <div class="flex items-center gap-4 w-full" id="products"></div>
+      </section>
+
+      <section class="flex items-center gap-4 pt-14">
+        <div class="grid grid-cols-3 gap-4 w-3/4 h-fit">
+          <div class="flex flex-col gap-4 w-full h-fit" id="gridDeals">
+            <h1 class="font-medium">Hot Deals</h1>
+          </div>
+          <div class="flex flex-col gap-4 w-full h-fit" id="gridBest">
+            <h1 class="font-medium">Best Sellers</h1>
+          </div>
+          <div class="flex flex-col gap-4 w-full h-fit" id="gridSeller">
+            <h1 class="font-medium">Top Rated</h1>
+          </div>
+        </div>
+        <div class="w-1/4 h-[57vh] rounded-md overflow-hidden">
+          <img
+            src="assets/images/Image-15.png"
+            alt=""
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+
+      <section class="mt-16 relative h-fit">
+        <h1 class="text-center text-3xl font-medium mb-6">Top Categories</h1>
+        <div
+          class="!static swiper flex items-center gap-6 !w-3/4"
+          id="swiper  "
+        >
+          <div class="swiper-wrapper py-2 !w-full" id="swiper-wrapper"></div>
+          <div
+            class="swiper-button-next after:content-[''] after:text-transparent after:w-4 after:h-4 after:bg-[url(assets/icons/arrow.svg)] after:p-4 after:rounded-full after:border after:bg-no-repeat after:bg-center after:bg-[30%_100%] rotate-180 !right-20 !top-2/3"
+          ></div>
+          <div
+            class="swiper-button-prev after:content-[''] after:text-transparent after:w-4 after:h-4 after:bg-[url(assets/icons/arrow.svg)] after:p-4 after:rounded-full after:border after:bg-no-repeat after:bg-center after:bg-[30%_100%] !left-20 !top-2/3"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="data.js"></script>
+    <script src="swiper.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
